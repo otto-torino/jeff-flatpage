@@ -1,0 +1,2 @@
+<?= $information ?>
+<?= $edit_fields ?>
