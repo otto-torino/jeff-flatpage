@@ -5,7 +5,7 @@ jeff-flatpage by Otto srl, MIT license
 
 jeff-flatpage is a jeff module that lets you store simple "flat" HTML content in a database and handles the management for you via jeff’s admin interface.
 
-Use it for one-off, special-case pages, such as "About" or "Privacy Policy" pages, that you want to store in a database but for which you don’t want to develop a custom Django application.
+Use it for one-off, special-case pages, such as "About" or "Privacy Policy" pages, that you want to store in a database but for which you don’t want to develop a custom Jeff module.
 
 The module is provided with english and italian translations, and a mysql statement for the table creation.    
 Media (images, videos) may be added to the page content, whose access may also be restricted to some system groups.    
