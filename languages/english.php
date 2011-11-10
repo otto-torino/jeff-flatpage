@@ -3,7 +3,7 @@
 $trnsls = array(
 	"FlatpageAdminFormInformation"=>"<p>Images and videos may be placed inside the text using the following tags:</p>
 		<ul>
-			<li>{{image1 width=200 position:left lightbox:true}}</li>
+			<li>{{image1 width=200 position=left lightbox=true}}</li>
 			<li>{{image2 width=500}}</li>
 			<li>{{video1 width=640 height=510}}</li>
 		</ul>
