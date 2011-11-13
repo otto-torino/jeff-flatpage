@@ -15,41 +15,39 @@
 <li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
 <li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;Template&nbsp;displayed&nbsp;when&nbsp;the&nbsp;requested&nbsp;content&nbsp;is&nbsp;found</span></div></li>
 <li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*</span></div></li>
-<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;The&nbsp;template&nbsp;defined&nbsp;variables&nbsp;are:&lt;br/&gt;</span></div></li>
-<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;&lt;ul&gt;</span></div></li>
-<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;&lt;li&gt;&lt;b&gt;title&lt;/b&gt;:&nbsp;the&nbsp;page&nbsp;title&lt;/li&gt;</span></div></li>
-<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*&nbsp;&lt;li&gt;&lt;b&gt;date&lt;/b&gt;:&nbsp;the&nbsp;page&nbsp;date&lt;/li&gt;</span></div></li>
-<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*&nbsp;&lt;li&gt;&lt;b&gt;subtitle&lt;/b&gt;:&nbsp;the&nbsp;page&nbsp;subtitle&lt;/li&gt;</span></div></li>
-<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*&nbsp;&lt;li&gt;&lt;b&gt;abstract&lt;/b&gt;:&nbsp;the&nbsp;page&nbsp;abstract&lt;/li&gt;</span></div></li>
-<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;*&nbsp;&lt;li&gt;&lt;b&gt;text&lt;/b&gt;:&nbsp;the&nbsp;page&nbsp;text&lt;/li&gt;</span></div></li>
-<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;*&nbsp;&lt;/ul&gt;</span></div></li>
-<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;jeff-flatpage</span></div></li>
-<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;1.0</span></div></li>
-<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;2011&nbsp;Otto&nbsp;srl</span></div></li>
-<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;abidibo&nbsp;&lt;abidibo@gmail.com&gt;</span></div></li>
-<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;http://www.opensource.org/licenses/mit-license.php&nbsp;MIT&nbsp;license</span></div></li>
-<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a20"></a><span class="src-php">?&gt;</span></div></li>
-<li><div class="src-line"><a name="a21"></a>&lt;section&gt;</div></li>
-<li><div class="src-line"><a name="a22"></a>&lt;h1&gt;<span class="src-php">&lt;?=&nbsp;</span><span class="src-var">$title&nbsp;</span><span class="src-php">?&gt;</span>&lt;/h1&gt;</div></li>
-<li><div class="src-line"><a name="a23"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">if</span><span class="src-sym">(</span><span class="src-var">$date</span><span class="src-sym">)</span>:&nbsp;<span class="src-php">?&gt;</span></div></li>
-<li><div class="src-line"><a name="a24"></a>&lt;h4&gt;<span class="src-php">&lt;?=&nbsp;</span><span class="src-var">$date&nbsp;</span><span class="src-php">?&gt;</span>&lt;/h4&gt;</div></li>
-<li><div class="src-line"><a name="a25"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">endif&nbsp;</span><span class="src-php">?&gt;</span></div></li>
-<li><div class="src-line"><a name="a26"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">if</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$subtitle</span><span class="src-sym">))</span>:&nbsp;<span class="src-php">?&gt;</span></div></li>
-<li><div class="src-line"><a name="a27"></a>&lt;h3&gt;<span class="src-php">&lt;?=&nbsp;</span><span class="src-var">$subtitle&nbsp;</span><span class="src-php">?&gt;</span>&lt;/h3&gt;</div></li>
-<li><div class="src-line"><a name="a28"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">endif&nbsp;</span><span class="src-php">?&gt;</span></div></li>
-<li><div class="src-line"><a name="a29"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">if</span><span class="src-sym">(</span><span class="src-var">$abstract</span><span class="src-sym">)</span>:&nbsp;<span class="src-php">?&gt;</span></div></li>
-<li><div class="src-line"><a name="a30"></a>&lt;div&nbsp;class=&quot;abstract&quot;&gt;<span class="src-php">&lt;?=&nbsp;</span><span class="src-var">$abstract&nbsp;</span><span class="src-php">?&gt;</span>&lt;/div&gt;</div></li>
-<li><div class="src-line"><a name="a31"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">endif&nbsp;</span><span class="src-php">?&gt;</span></div></li>
-<li><div class="src-line"><a name="a32"></a>&lt;div&gt;</div></li>
-<li><div class="src-line"><a name="a33"></a><span class="src-php">&lt;?=&nbsp;</span><span class="src-var">$text&nbsp;</span><span class="src-php">?&gt;</span></div></li>
-<li><div class="src-line"><a name="a34"></a>&lt;/div&gt;</div></li>
-<li><div class="src-line"><a name="a35"></a>&lt;/section&gt;</div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;The&nbsp;template&nbsp;defined&nbsp;variables&nbsp;are:&lt;br&nbsp;/&gt;</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;-&nbsp;&lt;b&gt;title&lt;/b&gt;:&nbsp;the&nbsp;page&nbsp;title&lt;br&nbsp;/&gt;</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;-&nbsp;&lt;b&gt;date&lt;/b&gt;:&nbsp;the&nbsp;page&nbsp;date&lt;br&nbsp;/&gt;</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*&nbsp;-&nbsp;&lt;b&gt;subtitle&lt;/b&gt;:&nbsp;the&nbsp;page&nbsp;subtitle&lt;br&nbsp;/&gt;</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*&nbsp;-&nbsp;&lt;b&gt;abstract&lt;/b&gt;:&nbsp;the&nbsp;page&nbsp;abstract&lt;br&nbsp;/&gt;</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*&nbsp;-&nbsp;&lt;b&gt;text&lt;/b&gt;:&nbsp;the&nbsp;page&nbsp;text&lt;br&nbsp;/&gt;</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;jeff-flatpage</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;1.2</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;2011&nbsp;Otto&nbsp;srl</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;abidibo&nbsp;&lt;abidibo@gmail.com&gt;</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;http://www.opensource.org/licenses/mit-license.php&nbsp;MIT&nbsp;license</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a19"></a>&lt;section&gt;</div></li>
+<li><div class="src-line"><a name="a20"></a>&lt;h1&gt;<span class="src-php">&lt;?=&nbsp;</span><span class="src-var">$title&nbsp;</span><span class="src-php">?&gt;</span>&lt;/h1&gt;</div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">if</span><span class="src-sym">(</span><span class="src-var">$date</span><span class="src-sym">)</span>:&nbsp;<span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&lt;h4&gt;<span class="src-php">&lt;?=&nbsp;</span><span class="src-var">$date&nbsp;</span><span class="src-php">?&gt;</span>&lt;/h4&gt;</div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">endif&nbsp;</span><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">if</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$subtitle</span><span class="src-sym">))</span>:&nbsp;<span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a25"></a>&lt;h3&gt;<span class="src-php">&lt;?=&nbsp;</span><span class="src-var">$subtitle&nbsp;</span><span class="src-php">?&gt;</span>&lt;/h3&gt;</div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">endif&nbsp;</span><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">if</span><span class="src-sym">(</span><span class="src-var">$abstract</span><span class="src-sym">)</span>:&nbsp;<span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&lt;div&nbsp;class=&quot;abstract&quot;&gt;<span class="src-php">&lt;?=&nbsp;</span><span class="src-var">$abstract&nbsp;</span><span class="src-php">?&gt;</span>&lt;/div&gt;</div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-php">&lt;?&nbsp;</span><span class="src-key">endif&nbsp;</span><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&lt;div&gt;</div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-php">&lt;?=&nbsp;</span><span class="src-var">$text&nbsp;</span><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&lt;/div&gt;</div></li>
+<li><div class="src-line"><a name="a33"></a>&lt;/section&gt;</div></li>
 </ol></div>
 </div>
 	<p class="notes" id="credit">
-		Documentation generated on Sun, 13 Nov 2011 14:16:01 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+		Documentation generated on Sun, 13 Nov 2011 14:28:20 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</body>
 </html>
