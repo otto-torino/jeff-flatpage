@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class flatpageController</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class flatpageController</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The flatpage controller class</p>
+<p class="description"><p>Inherits from jeff controller class.<br />  This class is the flatpage module interface, defines all public methods that may be accessed through url.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> abidibo &lt;<a href="mailto:abidibo@gmail.com">abidibo@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> 1.2</li>
+				<li><span class="field">copyright:</span> 2011 Otto srl</li>
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a></li>
+				<li><span class="field">uses:</span> controller</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_flatpage---flatpage.controller.php.html">/flatpage/flatpage.controller.php</a> (line <span class="field"><a href="../__filesource/fsource_jeff-flatpage__flatpageflatpage.controller.php.html#a29">29</a></span>)
+		</p>
+		
+				
+		<pre>controller
+   |
+   --flatpageController</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																				
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">registry</span>&nbsp;<span class="var-name">$registry</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#manage" title="details" class="method-name">manage</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#page403" title="details" class="method-name">page403</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#page404" title="details" class="method-name">page404</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#parseDescription" title="details" class="method-name">parseDescription</a>
+											(<span class="var-type">array[int]string</span>&nbsp;<span class="var-name">$matches</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#view" title="details" class="method-name">view</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../__filesource/fsource_jeff-flatpage__flatpageflatpage.controller.php.html#a38">38</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">flatpage controller constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">registry</span>&nbsp;<span class="var-name">$registry</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">registry</span>
+				<span class="var-name">$registry</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmanage" id="manage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">manage</span> (line <span class="line-number"><a href="../__filesource/fsource_jeff-flatpage__flatpageflatpage.controller.php.html#a102">102</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method called to display the flatpage backoffice interface</p>
+<p class="description"><p>Manages the pages list, allows insertion of new pages, modification and deletion of existing pages.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			manage
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpage403" id="page403"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">page403</span> (line <span class="line-number"><a href="../__filesource/fsource_jeff-flatpage__flatpageflatpage.controller.php.html#a208">208</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the 403 template</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			page403
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpage404" id="page404"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">page404</span> (line <span class="line-number"><a href="../__filesource/fsource_jeff-flatpage__flatpageflatpage.controller.php.html#a192">192</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the 404 template</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			page404
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodparseDescription" id="parseDescription"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseDescription</span> (line <span class="line-number"><a href="../__filesource/fsource_jeff-flatpage__flatpageflatpage.controller.php.html#a157">157</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Page text parser</p>
+<p class="description"><p>Parse page text and replace custom images and video tags with html images and youtube iframes.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			parseDescription
+		</span>
+					(<span class="var-type">array[int]string</span>&nbsp;<span class="var-name">$matches</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array[int]string</span>
+				<span class="var-name">$matches</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodview" id="view"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">view</span> (line <span class="line-number"><a href="../__filesource/fsource_jeff-flatpage__flatpageflatpage.controller.php.html#a60">60</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method called to display a page content</p>
+<p class="description"><p>Read the requested slug from $_GET variables, try to get the associated page contents from database.<br />  Display page contents if found and not forbidden.<br />  Display a 403 template if contents are forbidden to requesting user.<br />  Display a 404 template if contents are not found.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			view
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Nov 2011 14:28:14 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
