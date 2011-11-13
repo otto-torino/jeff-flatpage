@@ -1,5 +1,16 @@
 <?php
-// append the following array items to the italiano.php language file inside the the used theme folder
+/**
+ * Contains the string used for italian localization.
+ *
+ * Append the following array items to the italiano.php language file inside the used theme folder (or the default one)<br />
+ * <pre>ROOT/themes/default/languages/italiano.php</pre>
+ *
+ * @package jeff-flatpage
+ * @version 1.2
+ * @copyright 2011 Otto srl
+ * @author abidibo <abidibo@gmail.com> 
+ * @license http://www.opensource.org/licenses/mit-license.php MIT license
+ */
 $trnsls = array(
 	"FlatpageAdminFormInformation"=>"<p>Le immagini ed il video possono essere inseriti all'interno del testo nella posizione voluta utilizzando i seguenti tag:</p>
 		<ul>

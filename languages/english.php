@@ -1,5 +1,16 @@
 <?php
-// append the following array items to the english.php language file inside the the used theme folder
+/**
+ * Contains the string used for english localization.
+ *
+ * Append the following array items to the english.php language file inside the used theme folder (or the default one)<br />
+ * <pre>ROOT/themes/default/languages/english.php</pre>
+ *
+ * @package jeff-flatpage
+ * @version 1.2
+ * @copyright 2011 Otto srl
+ * @author abidibo <abidibo@gmail.com> 
+ * @license http://www.opensource.org/licenses/mit-license.php MIT license
+ */
 $trnsls = array(
 	"FlatpageAdminFormInformation"=>"<p>Images and videos may be placed inside the text using the following tags:</p>
 		<ul>
