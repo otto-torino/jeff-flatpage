@@ -1,7 +1,7 @@
 jeff-flatpage by Otto srl, MIT license
 ======================================
 
-![Screenshot](http://github.com/otto-torino/jeff-flatpage/raw/master/screenshot_admin_list.jpg)
+![Screenshot](http://github.com/otto-torino/jeff-flatpage/raw/master/doc/screenshot_admin_list.jpg)
 
 jeff-flatpage is a jeff module that lets you store simple "flat" HTML content in a database and handles the management for you via jeff’s admin interface.
 

@@ -1,12 +1,53 @@
 <?php
+/**
+ * The flatpage admin table backoffice 
+ * 
+ * @package jeff-flatpage
+ * @version 1.0
+ * @copyright 2011 Otto srl
+ * @author abidibo <abidibo@gmail.com> 
+ * @license http://www.opensource.org/licenses/mit-license.php MIT license
+ */
 
+/**
+ * flatpageAdminTable 
+ *
+ * Inherits from jeff adminTable class.<br />
+ * This class allows the flatpage backoffice generation.
+ *
+ * @uses adminTable
+ * @package jeff-flatpage 
+ * @version 1.0
+ * @copyright 2011 Otto srl
+ * @author abidibo <abidibo@gmail.com> 
+ * @license http://www.opensource.org/licenses/mit-license.php MIT license
+ */
 class flatpageAdminTable extends adminTable {
 	
+	/**
+	 * flatpageAdminTable constructor
+	 *
+	 * Construct the parent class 
+	 * 
+	 * @param registry $registry 
+	 * @param string $table 
+	 * @param array[string]mixed $opts 
+	 * @access public
+	 * @return void
+	 */
 	function __construct($registry, $table, $opts=null) {
 	
 		parent::__construct($registry, $table, $opts);
 	}
 
+	/**
+	 * Generation of backoffice pages list
+	 *
+	 * Add the url visualization to standard adminTable view list
+	 * 
+	 * @access public
+	 * @return string
+	 */
 	public function view() {
 
 		$order = cleanInput('get', 'order', 'string');
@@ -159,6 +200,15 @@ class flatpageAdminTable extends adminTable {
 		return $this->_view->render();
 	}
 
+	/**
+	 * Management of modification actions 
+	 *
+	 * Generation of insertion/modification form. Management of deletion or export actions.
+	 * 
+	 * @param array[string]mixed $opts 
+	 * @access public
+	 * @return string
+	 */
 	public function editFields($opts=null) {
 		
 		$this->_view->setTpl('flatpage_admin_form', array());

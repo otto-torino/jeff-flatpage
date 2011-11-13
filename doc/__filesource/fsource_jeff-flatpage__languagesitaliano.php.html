@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for italiano.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file italiano.php</h1>
+<p>Documentation is available at <a href="../jeff-flatpage/_languages---italiano.php.html">italiano.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;Contains&nbsp;the&nbsp;string&nbsp;used&nbsp;for&nbsp;italian&nbsp;localization.</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;Append&nbsp;the&nbsp;following&nbsp;array&nbsp;items&nbsp;to&nbsp;the&nbsp;italiano.php&nbsp;language&nbsp;file&nbsp;inside&nbsp;the&nbsp;used&nbsp;theme&nbsp;folder&nbsp;(or&nbsp;the&nbsp;default&nbsp;one)&lt;br&nbsp;/&gt;</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;&lt;pre&gt;ROOT/themes/default/languages/italiano.php&lt;/pre&gt;</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;jeff-flatpage</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;1.0</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;2011&nbsp;Otto&nbsp;srl</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;abidibo&nbsp;&lt;abidibo@gmail.com&gt;</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;http://www.opensource.org/licenses/mit-license.php&nbsp;MIT&nbsp;license</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-var">$trnsls&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;FlatpageAdminFormInformation&quot;</span>=&gt;<span class="src-str">&quot;&lt;p&gt;Le&nbsp;immagini&nbsp;ed&nbsp;il&nbsp;video&nbsp;possono&nbsp;essere&nbsp;inseriti&nbsp;all'interno&nbsp;del&nbsp;testo&nbsp;nella&nbsp;posizione&nbsp;voluta&nbsp;utilizzando&nbsp;i&nbsp;seguenti&nbsp;tag:&lt;/p&gt;</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;{{image1&nbsp;width=200&nbsp;position=left&nbsp;lightbox=true}}&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;{{image&nbsp;width=500}}&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;{{video1&nbsp;width=640&nbsp;height=510}}&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;L'ordine&nbsp;degli&nbsp;attributi&nbsp;&lt;b&gt;deve&nbsp;essere&nbsp;necessariamente&lt;/b&gt;&nbsp;width&nbsp;-&nbsp;height&nbsp;-&nbsp;position&nbsp;-&nbsp;lightbox.&lt;/p&gt;</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;I&nbsp;video&nbsp;di&nbsp;default&nbsp;hanno&nbsp;dimensioni&nbsp;480x390.&lt;/p&gt;</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;L'attributo&nbsp;&lt;i&gt;lightbox&lt;/i&gt;&nbsp;indica&nbsp;se&nbsp;aprire&nbsp;l'immagine&nbsp;con&nbsp;effetto&nbsp;lightbox,&nbsp;i&nbsp;video&nbsp;vengono&nbsp;sempre&nbsp;mostrati&nbsp;nella&nbsp;pagina&nbsp;all'interno&nbsp;di&nbsp;un&nbsp;iframe.&lt;/p&gt;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;L'attributo&nbsp;&lt;i&gt;position&lt;/i&gt;&nbsp;può&nbsp;essere:&nbsp;left|right|block.&nbsp;Se&nbsp;non&nbsp;viene&nbsp;specificato&nbsp;si&nbsp;intende&nbsp;il&nbsp;comportamento&nbsp;di&nbsp;default&nbsp;(inline)&lt;/p&gt;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;left:&nbsp;immagine&nbsp;flottante&nbsp;sulla&nbsp;sinistra&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;right:&nbsp;immagine&nbsp;flottante&nbsp;sulla&nbsp;destra&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;block:&nbsp;immagine&nbsp;tipo&nbsp;blocco,&nbsp;il&nbsp;testo&nbsp;successivo&nbsp;va&nbsp;a&nbsp;capo&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Per&nbsp;rendere&nbsp;una&nbsp;pagina&nbsp;pubblica&nbsp;non&nbsp;selezionare&nbsp;alcun&nbsp;gruppo,&nbsp;per&nbsp;restringerne&nbsp;l'accesso&nbsp;solamente&nbsp;a&nbsp;certi&nbsp;gruppi&nbsp;selezionare&nbsp;quelli&nbsp;desiderati.&lt;/p&gt;&quot;</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;FlatpageNotExistsTitle&quot;</span>=&gt;<span class="src-str">&quot;Pagina&nbsp;non&nbsp;trovata&quot;</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;FlatpageNotExistsText&quot;</span>=&gt;<span class="src-str">&quot;La&nbsp;pagina&nbsp;che&nbsp;stai&nbsp;cercando&nbsp;non&nbsp;esiste!&nbsp;Potrebbe&nbsp;essere&nbsp;stata&nbsp;rimossa&nbsp;oppure&nbsp;aver&nbsp;cambiato&nbsp;url.&quot;</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;FlatpageForbiddenTitle&quot;</span>=&gt;<span class="src-str">&quot;Accesso&nbsp;negato&quot;</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;FlatpageForbiddenText&quot;</span>=&gt;<span class="src-str">&quot;L'accesso&nbsp;ai&nbsp;contenuti&nbsp;richiesti&nbsp;è&nbsp;proibito.&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Nov 2011 14:16:01 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

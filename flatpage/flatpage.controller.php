@@ -1,10 +1,40 @@
 <?php
+/**
+ * The flatpage controller
+ * 
+ * @package jeff-flatpage
+ * @version 1.0
+ * @copyright 2011 Otto srl
+ * @author abidibo <abidibo@gmail.com> 
+ * @license http://www.opensource.org/licenses/mit-license.php MIT license
+ */
 
 require_once('flatpage.php');
 require_once('flatpageAdminTable.php');
 
+/**
+ * The flatpage controller class
+ *
+ * Inherits from jeff controller class.<br />
+ * This class is the flatpage module interface, defines all public methods that may be accessed through url. 
+ * 
+ * @uses controller
+ * @package jeff-flatpage 
+ * @version 1.0
+ * @copyright 2011 Otto srl
+ * @author abidibo <abidibo@gmail.com> 
+ * @license http://www.opensource.org/licenses/mit-license.php MIT license
+ *
+ */
 class flatpageController extends controller {
 
+	/**
+	 * flatpage controller constructor 
+	 * 
+	 * @param registry $registry 
+	 * @access public
+	 * @return void
+	 */
 	function __construct($registry) {
 
 		parent::__construct($registry);
@@ -12,11 +42,21 @@ class flatpageController extends controller {
 		$this->_cpath = dirname(__FILE__);
 		$this->_mdl_name = "flatpage";
 
-		// privileges
 		$this->_class_privilege = $this->_mdl_name;
 		$this->_admin_privilege = 1;
 	}
 
+	/**
+	 * Method called to display a page content 
+	 *
+	 * Read the requested slug from $_GET variables, try to get the associated page contents from database.<br />
+	 * Display page contents if found and not forbidden.<br />
+	 * Display a 403 template if contents are forbidden to requesting user.<br />
+	 * Display a 404 template if contents are not found.
+	 * 
+	 * @access public
+	 * @return string
+	 */
 	public function view() {
 	
 		$slug = cleanInput("get", "id", "string");
@@ -51,6 +91,14 @@ class flatpageController extends controller {
 
 	}
 
+	/**
+	 * Method called to display the flatpage backoffice interface
+	 *
+	 * Manages the pages list, allows insertion of new pages, modification and deletion of existing pages. 
+	 * 
+	 * @access public
+	 * @return string
+	 */
 	public function manage() {
 	
 		access::check($this->_registry, $this->_class_privilege, $this->_admin_privilege, array("exitOnFailure"=>true));
@@ -97,6 +145,15 @@ class flatpageController extends controller {
 		return $this->_view->render();
 	}
 
+	/**
+	 * Page text parser
+	 *
+	 * Parse page text and replace custom images and video tags with html images and youtube iframes. 
+	 * 
+	 * @param array[int]string $matches 
+	 * @access private
+	 * @return string
+	 */
 	private function parseDescription($matches) {
 
 		if($matches[1]=='image1' || $matches[1]=='image2') {
@@ -126,6 +183,12 @@ class flatpageController extends controller {
 		}
 	}
 
+	/**
+	 * Return the 404 template 
+	 * 
+	 * @access private
+	 * @return string
+	 */
 	private function page404() {
 	
 		$this->_view->setTpl('flatpage_404');
@@ -136,6 +199,12 @@ class flatpageController extends controller {
 
 	}
 
+	/**
+	 * Return the 403 template 
+	 * 
+	 * @access private
+	 * @return string
+	 */
 	private function page403() {
 	
 		$this->_view->setTpl('flatpage_403');
