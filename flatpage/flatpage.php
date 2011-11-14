@@ -74,10 +74,10 @@ class flatpage extends model {
 	 * Return a model instance if the slug is found, null otherwise  
 	 * 
 	 * @param registry $registry 
-	 * @param string $slug 
+	 * @param string $slug the slug taken from the query string
 	 * @static
 	 * @access public
-	 * @return mixed
+	 * @return mixed returns the flatpage object if found, null otherwise
 	 */
 	public static function getFromSlug($registry, $slug) {
 		
