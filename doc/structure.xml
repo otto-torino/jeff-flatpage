@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <project version="0.15.1" title="jeff-flatpage">
-  <file path="flatpage/flatpageAdminTable.php" hash="30c70f5f9055825e3b764651f66192ab" package="jeff-flatpage">
+  <file path="flatpage/flatpageAdminTable.php" hash="4f9ec9df54caae73967f61ad0b6dafeb" package="jeff-flatpage">
     <docblock>
       <description>The flatpage admin table backoffice</description>
       <long-description>
 </long-description>
       <tag line="2" name="package" description="jeff-flatpage"/>
-      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="version" description="1.21"/>
       <tag line="2" name="copyright" description="2011 Otto srl"/>
       <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
       <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
@@ -22,7 +22,7 @@ This class allows the flatpage backoffice generation.&lt;/p&gt;
 </long-description>
         <tag line="12" name="uses" description="\adminTable" refers="\adminTable"/>
         <tag line="12" name="package" description="jeff-flatpage"/>
-        <tag line="12" name="version" description="1.2"/>
+        <tag line="12" name="version" description="1.21"/>
         <tag line="12" name="copyright" description="2011 Otto srl"/>
         <tag line="12" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
         <tag line="12" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
@@ -97,13 +97,13 @@ This class allows the flatpage backoffice generation.&lt;/p&gt;
       </method>
     </class>
   </file>
-  <file path="flatpage/flatpage.php" hash="b5e91b14d3537172ab3205ea80264405" package="jeff-flatpage">
+  <file path="flatpage/flatpage.php" hash="617bc7803cc59d1af0c2b38d5904bc2f" package="jeff-flatpage">
     <docblock>
       <description>The flatpage model</description>
       <long-description>
 </long-description>
       <tag line="2" name="package" description="jeff-flatpage"/>
-      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="version" description="1.21"/>
       <tag line="2" name="copyright" description="2011 Otto srl"/>
       <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
       <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
@@ -133,7 +133,7 @@ This class defines the flatpage fields and provides a method to retrieve an obje
 </long-description>
         <tag line="12" name="uses" description="\model" refers="\model"/>
         <tag line="12" name="package" description="jeff-flatpage"/>
-        <tag line="12" name="version" description="1.2"/>
+        <tag line="12" name="version" description="1.21"/>
         <tag line="12" name="copyright" description="2011 Otto srl"/>
         <tag line="12" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
         <tag line="12" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
@@ -218,13 +218,13 @@ Return a model instance if the slug is found, null otherwise&lt;/p&gt;
       </method>
     </class>
   </file>
-  <file path="flatpage/flatpage.controller.php" hash="36341557c9864f9349cf801ea6366a7f" package="jeff-flatpage">
+  <file path="flatpage/flatpage.controller.php" hash="df0b5f04a3ae361eb85022fa056902b0" package="jeff-flatpage">
     <docblock>
       <description>The flatpage controller</description>
       <long-description>
 </long-description>
       <tag line="2" name="package" description="jeff-flatpage"/>
-      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="version" description="1.21"/>
       <tag line="2" name="copyright" description="2011 Otto srl"/>
       <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
       <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
@@ -246,7 +246,7 @@ This class is the flatpage module interface, defines all public methods that may
 </long-description>
         <tag line="15" name="uses" description="\controller" refers="\controller"/>
         <tag line="15" name="package" description="jeff-flatpage"/>
-        <tag line="15" name="version" description="1.2"/>
+        <tag line="15" name="version" description="1.21"/>
         <tag line="15" name="copyright" description="2011 Otto srl"/>
         <tag line="15" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
         <tag line="15" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
@@ -344,7 +344,7 @@ Display a 404 template if contents are not found.&lt;/p&gt;
       </method>
     </class>
   </file>
-  <file path="view/flatpage_admin_form.php" hash="47ac302c03e18fce2907c0bda7c96b1b" package="jeff-flatpage">
+  <file path="view/flatpage_admin_form.php" hash="19f05e14100290befed351fdd0df67f9" package="jeff-flatpage">
     <docblock>
       <description>Template of the insertion/modification form the administration area</description>
       <long-description>&lt;p&gt;The template defined variables are:&lt;br /&gt;
@@ -352,13 +352,13 @@ Display a 404 template if contents are not found.&lt;/p&gt;
 - &lt;b&gt;edit_fields&lt;/b&gt;: html form&lt;br /&gt;&lt;/p&gt;
 </long-description>
       <tag line="2" name="package" description="jeff-flatpage"/>
-      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="version" description="1.21"/>
       <tag line="2" name="copyright" description="2011 Otto srl"/>
       <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
       <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
     </docblock>
   </file>
-  <file path="view/flatpage_view.php" hash="0c9f8dab2e4ec0faf587ef91caba9d7a" package="jeff-flatpage">
+  <file path="view/flatpage_view.php" hash="c7842a9f58eae29fc43d61d5a907b96a" package="jeff-flatpage">
     <docblock>
       <description>Template displayed when the requested content is found</description>
       <long-description>&lt;p&gt;The template defined variables are:&lt;br /&gt;
@@ -369,13 +369,13 @@ Display a 404 template if contents are not found.&lt;/p&gt;
 - &lt;b&gt;text&lt;/b&gt;: the page text&lt;br /&gt;&lt;/p&gt;
 </long-description>
       <tag line="2" name="package" description="jeff-flatpage"/>
-      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="version" description="1.21"/>
       <tag line="2" name="copyright" description="2011 Otto srl"/>
       <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
       <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
     </docblock>
   </file>
-  <file path="view/flatpage_403.php" hash="2ac43f0c737155b3053181065644ed0b" package="jeff-flatpage">
+  <file path="view/flatpage_403.php" hash="a021f7e0e642f6faf48354b3ff310746" package="jeff-flatpage">
     <docblock>
       <description>Template displayed when access to the requested content is forbidden</description>
       <long-description>&lt;p&gt;The template defined variables are:&amp;lt;br/&gt;
@@ -383,13 +383,13 @@ Display a 404 template if contents are not found.&lt;/p&gt;
 - &lt;b&gt;text&lt;/b&gt;: the page text&lt;br /&gt;&lt;/p&gt;
 </long-description>
       <tag line="2" name="package" description="jeff-flatpage"/>
-      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="version" description="1.21"/>
       <tag line="2" name="copyright" description="2011 Otto srl"/>
       <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
       <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
     </docblock>
   </file>
-  <file path="view/flatpage_404.php" hash="5373e856352d9bcdf30cb58d7602c75d" package="jeff-flatpage">
+  <file path="view/flatpage_404.php" hash="e144d1c23deb930f02be7c5dd24e1bd1" package="jeff-flatpage">
     <docblock>
       <description>Template displayed when the requested content does not exist</description>
       <long-description>&lt;p&gt;The template defined variables are:&amp;lt;br/&gt;
@@ -397,13 +397,13 @@ Display a 404 template if contents are not found.&lt;/p&gt;
 - &lt;b&gt;text&lt;/b&gt;: the page text&lt;br /&gt;&lt;/p&gt;
 </long-description>
       <tag line="2" name="package" description="jeff-flatpage"/>
-      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="version" description="1.21"/>
       <tag line="2" name="copyright" description="2011 Otto srl"/>
       <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
       <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
     </docblock>
   </file>
-  <file path="languages/italiano.php" hash="cea8064046ddb36c9a8423eddefef354" package="jeff-flatpage">
+  <file path="languages/italiano.php" hash="80216305786a59197cd8f0727bca744f" package="jeff-flatpage">
     <docblock>
       <description>Contains the string used for italian localization.</description>
       <long-description>&lt;p&gt;Append the following array items to the italiano.php language file inside the used theme folder (or the default one)&lt;br /&gt;&lt;/p&gt;
@@ -411,13 +411,13 @@ Display a 404 template if contents are not found.&lt;/p&gt;
 &lt;pre&gt;ROOT/themes/default/languages/italiano.php&lt;/pre&gt;
 </long-description>
       <tag line="2" name="package" description="jeff-flatpage"/>
-      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="version" description="1.21"/>
       <tag line="2" name="copyright" description="2011 Otto srl"/>
       <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
       <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
     </docblock>
   </file>
-  <file path="languages/english.php" hash="fcb637c200558a53fe0b707ea74246e3" package="jeff-flatpage">
+  <file path="languages/english.php" hash="02c255464862db7ea8f8c32919b323ae" package="jeff-flatpage">
     <docblock>
       <description>Contains the string used for english localization.</description>
       <long-description>&lt;p&gt;Append the following array items to the english.php language file inside the used theme folder (or the default one)&lt;br /&gt;&lt;/p&gt;
@@ -425,19 +425,19 @@ Display a 404 template if contents are not found.&lt;/p&gt;
 &lt;pre&gt;ROOT/themes/default/languages/english.php&lt;/pre&gt;
 </long-description>
       <tag line="2" name="package" description="jeff-flatpage"/>
-      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="version" description="1.21"/>
       <tag line="2" name="copyright" description="2011 Otto srl"/>
       <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
       <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
     </docblock>
   </file>
-  <file path="project_tables.php" hash="a8c30e023ec0d522941c3ea50c132492" package="jeff-flatpage">
+  <file path="project_tables.php" hash="2728e2e63f003cce2b45a7533be99cbb" package="jeff-flatpage">
     <docblock>
       <description>Definition of database tables used by the plugin</description>
       <long-description>
 </long-description>
       <tag line="2" name="package" description="jeff-flatpage"/>
-      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="version" description="1.21"/>
       <tag line="2" name="copyright" description="2011 Otto srl"/>
       <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
       <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
