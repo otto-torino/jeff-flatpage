@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_EN" xml:lang="en_EN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="jeff-flatpage, a jeff plugin" />
+<meta name="keywords" content="PHP,framework,LAMP,jeff,flatpage" />
+<title>jeff-flatpage</title>
+<style>
+body {
+	background-color: #eee;
+	font: 12px/22px normal Tahoma, Verdana, Arial;
+	color: #333;
+}
+.container {
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 20px;
+	width: 920px;
+	margin: auto;
+}
+a:link, a:visited { color: #FC2E69; text-decoration:none; }
+a:hover { text-decoration:underline; }
+.evidence { color: #544848; }
+</style>
+</head>
+<body>
+<div class="container">
+<a href="http://www.otto.to.it">
+<img src="logo.jpg" alt="logo otto" style="float:left; margin-right:10px;"/>
+</a>
+<h1>jeff-flatpage</h1>
+<p><a href="http://opensource.org/licenses/mit-license.php">MIT license</a></p>
+<p><a href="developer/index.html">Developer documentation</a></p>
+<div style="clear:both"></div>
+<p class="evidence">jeff-flatpage is a jeff module that lets you store simple "flat" HTML content in a database and handles the management for you via jeff’s admin interface.</p>
+<p>Use it for one-off, special-case pages, such as "About" or "Privacy Policy" pages, that you want to store in a database but for which you don’t want to develop a custom Jeff module.</p>
+<p>The module is provided with english and italian translations, and a mysql statement for the table creation.</p>
+<p>Media (images, videos) may be added to the page content, whose access may also be restricted to some system groups.</p>
+<p>The access to backoffice administration is restricted to users having the flatpage admin permission.</p>
+<h2>Fields</h2>
+<ul>
+<li><b>date</b> (optional)</li>
+<li><b>title</b> (mandatory)</li>
+<li><b>slug</b> (mandatory). Is the relative url remainding to the page (usually the tite without spaces and strange characters)</li>
+<li><b>subtitle</b> (optional)</li>
+<li><b>abstract</b> (optional)</li>
+<li><b>text</b> (optional)</li>
+<li><b>image1</b> (optional). An image file, supported formats are jpg,png,gif</li>
+<li><b>image2</b> (optional). An image file, supported formats are jpg,png,gif</li>
+<li><b>video1</b> (optional). A youtube video code (i.e. http://www.youtube.com/watch?v=fT7rCWZvsD8 => code: fT7rCWZvsD8)</li>
+<li><b>video2</b> (optional). A youtube video code (i.e. http://www.youtube.com/watch?v=fT7rCWZvsD8 => code: fT7rCWZvsD8)</li>
+<li><b>groups</b> (optional). A list of groups which can access the contents, if empty the content is public.</li>
+</ul>
+<p>Instructions on how to insert images and videos inside the page text are provided in the insertion form. Such elements may be inserted using custom tags like<br />
+{{image1 width=200 position:left lightbox:true}}</p>
+<h2>Outputs</h2>
+<ul>
+<li><b>page view</b></li>
+<li><b>page 404</b> (if the required slug is not found)</li>
+<li><b>page 403</b> (if the user can't access the content)</li>
+</ul>
+<h2>Installation</h2>
+<ol>
+<li>Create the db table and add the admin permission executing the statements provided in the flatpage.sql file. This file contains the statements using the mysql syntax, change it for different DBMS.</li>
+<li>Insert the table definition provided in the project_tables.php file inside your same-name file. If you don't have one copy it inside your ROOT directory.</li>
+<li>Create a "flatpage" directory inside the "upload" directory under ROOT (for the images upload).</li>
+<li>Append the array elements inside languages/.php to your theme languages files (the default one is in ROOT/themes/default/languages/.php).</li>
+<li>Copy all the files inside view directory inside your theme view directory (the default one is ROOT/themes/default/view).</li>
+<li>Copy the whole flatpage directory inside your modules directory (ROOT/modules).</li>
+<li>Finished.</li>
+<li>Add an admin menu link to access the flatpage backoffice, the url is ROOT/admin/flatpage/manage.</li>
+<li>Enjoy it.</li>
+</ol>
+
+<h2>Documentation</h2>
+<p>Surf the doc folder for developer documentation</p>
+
+<p><b>Please report issues, bugs and what you like in the project github issues page.</b></p>
+</div>
+</body>
+</html>
