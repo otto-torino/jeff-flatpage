@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<project version="0.15.1" title="jeff-flatpage">
+  <file path="flatpage/flatpageAdminTable.php" hash="30c70f5f9055825e3b764651f66192ab" package="jeff-flatpage">
+    <docblock>
+      <description>The flatpage admin table backoffice</description>
+      <long-description>
+</long-description>
+      <tag line="2" name="package" description="jeff-flatpage"/>
+      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="copyright" description="2011 Otto srl"/>
+      <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+      <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+    </docblock>
+    <class final="false" abstract="false" line="25" namespace="default" package="jeff-flatpage">
+      <name>flatpageAdminTable</name>
+      <extends>\adminTable</extends>
+      <full_name>\flatpageAdminTable</full_name>
+      <docblock>
+        <description>flatpageAdminTable</description>
+        <long-description>&lt;p&gt;Inherits from jeff adminTable class.&lt;br /&gt;
+This class allows the flatpage backoffice generation.&lt;/p&gt;
+</long-description>
+        <tag line="12" name="uses" description="\adminTable" refers="\adminTable"/>
+        <tag line="12" name="package" description="jeff-flatpage"/>
+        <tag line="12" name="version" description="1.2"/>
+        <tag line="12" name="copyright" description="2011 Otto srl"/>
+        <tag line="12" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+        <tag line="12" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" line="38" package="jeff-flatpage">
+        <name>__construct</name>
+        <docblock>
+          <description>flatpageAdminTable constructor</description>
+          <long-description>&lt;p&gt;Construct the parent class&lt;/p&gt;
+</long-description>
+          <tag line="27" name="param" description="" type="\registry" variable="$registry">
+            <type by_reference="false">\registry</type>
+          </tag>
+          <tag line="27" name="param" description="" type="string" variable="$table">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="27" name="param" description="" type="\array[string]mixed" variable="$opts">
+            <type by_reference="false">\array[string]mixed</type>
+          </tag>
+          <tag line="27" name="access" description="public"/>
+          <tag line="27" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="38">
+          <name>$registry</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="38">
+          <name>$table</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="38">
+          <name>$opts</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="51" package="jeff-flatpage">
+        <name>view</name>
+        <docblock>
+          <description>Generation of backoffice pages list</description>
+          <long-description>&lt;p&gt;Add the url visualization to standard adminTable view list&lt;/p&gt;
+</long-description>
+          <tag line="43" name="access" description="public"/>
+          <tag line="43" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="212" package="jeff-flatpage">
+        <name>editFields</name>
+        <docblock>
+          <description>Management of modification actions</description>
+          <long-description>&lt;p&gt;Generation of insertion/modification form. Management of deletion or export actions.&lt;/p&gt;
+</long-description>
+          <tag line="203" name="param" description="" type="\array[string]mixed" variable="$opts">
+            <type by_reference="false">\array[string]mixed</type>
+          </tag>
+          <tag line="203" name="access" description="public"/>
+          <tag line="203" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="212">
+          <name>$opts</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="flatpage/flatpage.php" hash="b5e91b14d3537172ab3205ea80264405" package="jeff-flatpage">
+    <docblock>
+      <description>The flatpage model</description>
+      <long-description>
+</long-description>
+      <tag line="2" name="package" description="jeff-flatpage"/>
+      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="copyright" description="2011 Otto srl"/>
+      <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+      <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+    </docblock>
+    <class final="false" abstract="false" line="39" namespace="default" package="jeff-flatpage">
+      <name>flatpage</name>
+      <extends>\model</extends>
+      <full_name>\flatpage</full_name>
+      <docblock>
+        <description>The flatpage model class</description>
+        <long-description>&lt;p&gt;Inherits from jeff model class.&lt;br /&gt;
+This class defines the flatpage fields and provides a method to retrieve an object from a slug (url request)&lt;/p&gt;
+
+&lt;p&gt;Model fields:&lt;br /&gt;
+- int &lt;b&gt;id&lt;/b&gt;: page identifier&lt;br /&gt;
+- string &lt;b&gt;date&lt;/b&gt;: page date&lt;br /&gt;
+- string &lt;b&gt;title&lt;/b&gt;: page title&lt;br /&gt;
+- string &lt;b&gt;slug&lt;/b&gt;: url query string&lt;br /&gt;
+- string &lt;b&gt;subtitle&lt;/b&gt;: page subtitle&lt;br /&gt;
+- string &lt;b&gt;abstract&lt;/b&gt;: page abstract&lt;br /&gt;
+- string &lt;b&gt;text&lt;/b&gt;: page text&lt;br /&gt;
+- string &lt;b&gt;image1&lt;/b&gt;: first image filename&lt;br /&gt;
+- string &lt;b&gt;image2&lt;/b&gt;: second image filename&lt;br /&gt;
+- string &lt;b&gt;video1&lt;/b&gt;: first video url code (youtube)&lt;br /&gt;
+- string &lt;b&gt;video2&lt;/b&gt;: second video url code (youtube)&lt;br /&gt;
+- string &lt;b&gt;groups&lt;/b&gt;: comma separated list of system group ids who may access the content. If empty the content is visible to everyone.&lt;/p&gt;
+</long-description>
+        <tag line="12" name="uses" description="\model" refers="\model"/>
+        <tag line="12" name="package" description="jeff-flatpage"/>
+        <tag line="12" name="version" description="1.2"/>
+        <tag line="12" name="copyright" description="2011 Otto srl"/>
+        <tag line="12" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+        <tag line="12" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" line="49" package="jeff-flatpage">
+        <name>__construct</name>
+        <docblock>
+          <description>flatpage model constructor</description>
+          <long-description>
+</long-description>
+          <tag line="41" name="param" description="" type="\registry" variable="$registry">
+            <type by_reference="false">\registry</type>
+          </tag>
+          <tag line="41" name="param" description="" type="int" variable="$id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="41" name="access" description="public"/>
+          <tag line="41" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="49">
+          <name>$registry</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="49">
+          <name>$id</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" line="64" package="jeff-flatpage">
+        <name>initP</name>
+        <docblock>
+          <description>Initialize the class properties retrieving them from database</description>
+          <long-description>
+</long-description>
+          <tag line="57" name="param" description="" type="int" variable="$id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="57" name="access" description="private"/>
+          <tag line="57" name="return" description="" type="\array[string]mixed">
+            <type by_reference="false">\array[string]mixed</type>
+          </tag>
+        </docblock>
+        <argument line="64">
+          <name>$id</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="82" package="jeff-flatpage">
+        <name>getFromSlug</name>
+        <docblock>
+          <description>Get flatpage object from slug</description>
+          <long-description>&lt;p&gt;Perform an sql select statement to retrieve page data from given slug.&lt;br /&gt;
+Return a model instance if the slug is found, null otherwise&lt;/p&gt;
+</long-description>
+          <tag line="70" name="param" description="" type="\registry" variable="$registry">
+            <type by_reference="false">\registry</type>
+          </tag>
+          <tag line="70" name="param" description="the slug taken from the query string" type="string" variable="$slug">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="70" name="static" description=""/>
+          <tag line="70" name="access" description="public"/>
+          <tag line="70" name="return" description="returns the flatpage object if found, null otherwise" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="82">
+          <name>$registry</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="82">
+          <name>$slug</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="flatpage/flatpage.controller.php" hash="36341557c9864f9349cf801ea6366a7f" package="jeff-flatpage">
+    <docblock>
+      <description>The flatpage controller</description>
+      <long-description>
+</long-description>
+      <tag line="2" name="package" description="jeff-flatpage"/>
+      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="copyright" description="2011 Otto srl"/>
+      <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+      <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+    </docblock>
+    <include type="Require Once" line="12">
+      <name>flatpage.php</name>
+    </include>
+    <include type="Require Once" line="13">
+      <name>flatpageAdminTable.php</name>
+    </include>
+    <class final="false" abstract="false" line="29" namespace="default" package="jeff-flatpage">
+      <name>flatpageController</name>
+      <extends>\controller</extends>
+      <full_name>\flatpageController</full_name>
+      <docblock>
+        <description>The flatpage controller class</description>
+        <long-description>&lt;p&gt;Inherits from jeff controller class.&lt;br /&gt;
+This class is the flatpage module interface, defines all public methods that may be accessed through url.&lt;/p&gt;
+</long-description>
+        <tag line="15" name="uses" description="\controller" refers="\controller"/>
+        <tag line="15" name="package" description="jeff-flatpage"/>
+        <tag line="15" name="version" description="1.2"/>
+        <tag line="15" name="copyright" description="2011 Otto srl"/>
+        <tag line="15" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+        <tag line="15" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" line="38" package="jeff-flatpage">
+        <name>__construct</name>
+        <docblock>
+          <description>flatpage controller constructor</description>
+          <long-description>
+</long-description>
+          <tag line="31" name="param" description="" type="\registry" variable="$registry">
+            <type by_reference="false">\registry</type>
+          </tag>
+          <tag line="31" name="access" description="public"/>
+          <tag line="31" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="38">
+          <name>$registry</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="60" package="jeff-flatpage">
+        <name>view</name>
+        <docblock>
+          <description>Method called to display a page content</description>
+          <long-description>&lt;p&gt;Read the requested slug from $_GET variables, try to get the associated page contents from database.&lt;br /&gt;
+Display page contents if found and not forbidden.&lt;br /&gt;
+Display a 403 template if contents are forbidden to requesting user.&lt;br /&gt;
+Display a 404 template if contents are not found.&lt;/p&gt;
+</long-description>
+          <tag line="49" name="access" description="public"/>
+          <tag line="49" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="102" package="jeff-flatpage">
+        <name>manage</name>
+        <docblock>
+          <description>Method called to display the flatpage backoffice interface</description>
+          <long-description>&lt;p&gt;Manages the pages list, allows insertion of new pages, modification and deletion of existing pages.&lt;/p&gt;
+</long-description>
+          <tag line="94" name="access" description="public"/>
+          <tag line="94" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" line="157" package="jeff-flatpage">
+        <name>parseDescription</name>
+        <docblock>
+          <description>Page text parser</description>
+          <long-description>&lt;p&gt;Parse page text and replace custom images and video tags with html images and youtube iframes.&lt;/p&gt;
+</long-description>
+          <tag line="148" name="param" description="" type="\array[int]string" variable="$matches">
+            <type by_reference="false">\array[int]string</type>
+          </tag>
+          <tag line="148" name="access" description="private"/>
+          <tag line="148" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="157">
+          <name>$matches</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" line="192" package="jeff-flatpage">
+        <name>page404</name>
+        <docblock>
+          <description>Return the 404 template</description>
+          <long-description>
+</long-description>
+          <tag line="186" name="access" description="private"/>
+          <tag line="186" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" line="208" package="jeff-flatpage">
+        <name>page403</name>
+        <docblock>
+          <description>Return the 403 template</description>
+          <long-description>
+</long-description>
+          <tag line="202" name="access" description="private"/>
+          <tag line="202" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="view/flatpage_admin_form.php" hash="47ac302c03e18fce2907c0bda7c96b1b" package="jeff-flatpage">
+    <docblock>
+      <description>Template of the insertion/modification form the administration area</description>
+      <long-description>&lt;p&gt;The template defined variables are:&lt;br /&gt;
+- &lt;b&gt;information&lt;/b&gt;: information about fields and media insertion&lt;br /&gt;
+- &lt;b&gt;edit_fields&lt;/b&gt;: html form&lt;br /&gt;&lt;/p&gt;
+</long-description>
+      <tag line="2" name="package" description="jeff-flatpage"/>
+      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="copyright" description="2011 Otto srl"/>
+      <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+      <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+    </docblock>
+  </file>
+  <file path="view/flatpage_view.php" hash="0c9f8dab2e4ec0faf587ef91caba9d7a" package="jeff-flatpage">
+    <docblock>
+      <description>Template displayed when the requested content is found</description>
+      <long-description>&lt;p&gt;The template defined variables are:&lt;br /&gt;
+- &lt;b&gt;title&lt;/b&gt;: the page title&lt;br /&gt;
+- &lt;b&gt;date&lt;/b&gt;: the page date&lt;br /&gt;
+- &lt;b&gt;subtitle&lt;/b&gt;: the page subtitle&lt;br /&gt;
+- &lt;b&gt;abstract&lt;/b&gt;: the page abstract&lt;br /&gt;
+- &lt;b&gt;text&lt;/b&gt;: the page text&lt;br /&gt;&lt;/p&gt;
+</long-description>
+      <tag line="2" name="package" description="jeff-flatpage"/>
+      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="copyright" description="2011 Otto srl"/>
+      <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+      <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+    </docblock>
+  </file>
+  <file path="view/flatpage_403.php" hash="2ac43f0c737155b3053181065644ed0b" package="jeff-flatpage">
+    <docblock>
+      <description>Template displayed when access to the requested content is forbidden</description>
+      <long-description>&lt;p&gt;The template defined variables are:&amp;lt;br/&gt;
+- &lt;b&gt;title&lt;/b&gt;: the page title&lt;br /&gt;
+- &lt;b&gt;text&lt;/b&gt;: the page text&lt;br /&gt;&lt;/p&gt;
+</long-description>
+      <tag line="2" name="package" description="jeff-flatpage"/>
+      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="copyright" description="2011 Otto srl"/>
+      <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+      <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+    </docblock>
+  </file>
+  <file path="view/flatpage_404.php" hash="5373e856352d9bcdf30cb58d7602c75d" package="jeff-flatpage">
+    <docblock>
+      <description>Template displayed when the requested content does not exist</description>
+      <long-description>&lt;p&gt;The template defined variables are:&amp;lt;br/&gt;
+- &lt;b&gt;title&lt;/b&gt;: the page title&lt;br /&gt;
+- &lt;b&gt;text&lt;/b&gt;: the page text&lt;br /&gt;&lt;/p&gt;
+</long-description>
+      <tag line="2" name="package" description="jeff-flatpage"/>
+      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="copyright" description="2011 Otto srl"/>
+      <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+      <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+    </docblock>
+  </file>
+  <file path="languages/italiano.php" hash="cea8064046ddb36c9a8423eddefef354" package="jeff-flatpage">
+    <docblock>
+      <description>Contains the string used for italian localization.</description>
+      <long-description>&lt;p&gt;Append the following array items to the italiano.php language file inside the used theme folder (or the default one)&lt;br /&gt;&lt;/p&gt;
+
+&lt;pre&gt;ROOT/themes/default/languages/italiano.php&lt;/pre&gt;
+</long-description>
+      <tag line="2" name="package" description="jeff-flatpage"/>
+      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="copyright" description="2011 Otto srl"/>
+      <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+      <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+    </docblock>
+  </file>
+  <file path="languages/english.php" hash="fcb637c200558a53fe0b707ea74246e3" package="jeff-flatpage">
+    <docblock>
+      <description>Contains the string used for english localization.</description>
+      <long-description>&lt;p&gt;Append the following array items to the english.php language file inside the used theme folder (or the default one)&lt;br /&gt;&lt;/p&gt;
+
+&lt;pre&gt;ROOT/themes/default/languages/english.php&lt;/pre&gt;
+</long-description>
+      <tag line="2" name="package" description="jeff-flatpage"/>
+      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="copyright" description="2011 Otto srl"/>
+      <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+      <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+    </docblock>
+  </file>
+  <file path="project_tables.php" hash="a8c30e023ec0d522941c3ea50c132492" package="jeff-flatpage">
+    <docblock>
+      <description>Definition of database tables used by the plugin</description>
+      <long-description>
+</long-description>
+      <tag line="2" name="package" description="jeff-flatpage"/>
+      <tag line="2" name="version" description="1.2"/>
+      <tag line="2" name="copyright" description="2011 Otto srl"/>
+      <tag line="2" name="author" description="abidibo &lt;abidibo@gmail.com&gt;"/>
+      <tag line="2" name="license" description="http://www.opensource.org/licenses/mit-license.php MIT license"/>
+    </docblock>
+    <constant namespace="default" line="15" package="jeff-flatpage">
+      <name>TBL_FLATPAGE</name>
+      <value>"flatpage"</value>
+      <docblock>
+        <description>Page contents table</description>
+        <long-description>
+</long-description>
+      </docblock>
+    </constant>
+  </file>
+  <package name="jeff-flatpage"/>
+  <namespace name="default"/>
+  <marker>todo</marker>
+  <marker>fixme</marker>
+</project>

@@ -49,4 +49,9 @@ Installation
 7. Add an admin menu link to access the flatpage backoffice, the url is ROOT/admin/flatpage/manage.
 8. Enjoy it.
 
+Documentation
+-------------
+
+Surf the doc folder for developer documentation
+
 Please report issues, bugs and what you like in the project github issues page.
