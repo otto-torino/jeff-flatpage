@@ -3,7 +3,7 @@
  * Definition of database tables used by the plugin
  * 
  * @package jeff-flatpage
- * @version 1.2
+ * @version 1.21
  * @copyright 2011 Otto srl
  * @author abidibo <abidibo@gmail.com> 
  * @license http://www.opensource.org/licenses/mit-license.php MIT license
