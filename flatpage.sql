@@ -23,7 +23,6 @@ CREATE TABLE IF NOT EXISTS `flatpage` (
 ---
 
 INSERT INTO `sys_privileges` (
-`id` ,
 `category` ,
 `class` ,
 `class_id` ,
@@ -31,5 +30,5 @@ INSERT INTO `sys_privileges` (
 `description`
 )
 VALUES (
-NULL , 'Pages', 'flatpage', '1', 'Management of flat html pages', 'Insertion, modification and deletion of flat html pages'
+'Pages', 'flatpage', '1', 'Management of flat html pages', 'Insertion, modification and deletion of flat html pages'
 );
